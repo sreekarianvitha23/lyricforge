@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LyricForge — AI Lyrics Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">✦ Creative Apps Challenge 2026</div>
+  <h1>LyricForge</h1>
+  <p class="subtitle">Turn your feelings into song — instantly</p>
+</header>
+
+<main>
+
+  <!-- Form Card -->
+  <div class="card">
+    <div class="demo-banner">
+      🎵 Demo mode — generates lyrics from a smart built-in lyrics bank
+    </div>
+
+    <div class="field">
+      <label>Song Theme / Story</label>
+      <textarea id="theme" placeholder="e.g. Falling in love in a rainy city, or chasing a dream that keeps slipping away…"></textarea>
+    </div>
+
+    <div class="grid-2">
+      <div class="field">
+        <label>Genre</label>
+        <select id="genre">
+          <option value="Pop">Pop</option>
+          <option value="R&B">R&B / Soul</option>
+          <option value="Hip-Hop">Hip-Hop / Rap</option>
+          <option value="Rock">Rock</option>
+          <option value="Country">Country</option>
+          <option value="Folk">Folk / Indie</option>
+          <option value="EDM">EDM / Dance</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Structure</label>
+        <select id="structure">
+          <option value="full">Full Song (V–C–V–C–B–C)</option>
+          <option value="short">Short (V–C–V–C)</option>
+          <option value="verse">Verse Only</option>
+          <option value="chorus">Chorus / Hook Only</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Mood</label>
+      <div class="mood-chips" id="moodChips">
+        <span class="chip" data-mood="Heartbroken">💔 Heartbroken</span>
+        <span class="chip active" data-mood="Hopeful">🌅 Hopeful</span>
+        <span class="chip" data-mood="Angry">🔥 Angry</span>
+        <span class="chip" data-mood="Nostalgic">🌙 Nostalgic</span>
+        <span class="chip" data-mood="Romantic">💜 Romantic</span>
+        <span class="chip" data-mood="Empowering">⚡ Empowering</span>
+        <span class="chip" data-mood="Chill">😌 Chill</span>
+        <span class="chip" data-mood="Dark">🖤 Dark</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Artist Style (optional)</label>
+      <input type="text" id="artist" placeholder="e.g. Taylor Swift, Drake, Billie Eilish…"/>
+    </div>
+
+    <button class="generate-btn" id="generateBtn" onclick="generateLyrics()">
+      ✦ Generate Lyrics
+    </button>
+
+    <div class="error-msg" id="errorMsg"></div>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>Composing your lyrics…</p>
+  </div>
+
+  <!-- Output Card -->
+  <div class="card output-card" id="outputCard">
+    <div class="output-header">
+      <span class="output-title" id="outputTitle">Your Lyrics</span>
+      <button class="copy-btn" onclick="copyLyrics()">Copy</button>
+    </div>
+    <div class="lyrics-text" id="lyricsOutput"></div>
+  </div>
+
+  <p class="note">LyricForge · Creative Apps Challenge 2026 · Built with ♥ </p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
