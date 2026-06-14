@@ -76,7 +76,7 @@ lyricforge/
 
 ## 👤 Author
 
-**Sreekar Ianvitha**
+**Sreekari anvitha**
 - GitHub: [@sreekarianvitha23](https://github.com/sreekarianvitha23)
 
 ---
